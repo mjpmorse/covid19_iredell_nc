@@ -42,7 +42,8 @@ cases = p_element_map.text.split("\n")
 # extract date of last update
 driver.get(my_url)
 p_element_date = driver.find_elements_by_css_selector('h3.subhead2')
-date = p_element_date[1].text.split(' ')[2]
+date = p_element_date[2].text.split(' ')[2]
+#print(p_element_date[2].text.split(' ')[2])
 
 # quit the webdriver
 driver.quit()
